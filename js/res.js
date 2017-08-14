@@ -1,6 +1,3 @@
-var height = document.getElementById("getHeight").offsetHeight;
-document.getElementById("height").innerHTML = height + "px";
-
 if ( $(window).width() > 788) {
   function init() {
      window.addEventListener('scroll', function(e){

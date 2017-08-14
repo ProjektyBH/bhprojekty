@@ -5,15 +5,19 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <title>Reference | PROJEKTY B.H., s.r.o.</title>
-  
-  <link href='https://fonts.googleapis.com/css?family=Pridi|Source+Sans+Pro:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-  <link rel='stylesheet' href='/css/main.css'>
+  <link href='https://fonts.googleapis.com/css?family=Pridi|Source+Sans+Pro:300,400,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href='/css/main.min.css'>
   <link rel='stylesheet' href='/icons/css/home.css'>
   <link rel='canonical' href='http://bhprojekty.cz/reference'>
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/classie.js"></script>
   <!--[if lt IE 9]>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js'></script>
   <![endif]-->
+  <!-- jQuery library (served from Google) -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <!-- bxSlider Javascript file -->
+  <script src="/js/jquery.bxslider.min.js"></script>
+  <link href="/js/jquery.bxslider.css" rel="stylesheet" />
 </head>
 
   <body id="reference">
@@ -21,16 +25,10 @@
     <header>
   <div class="container">
     <a href="/">
-      <div class='box-scene'>
-        <div class='box'>
-          <div class='front'>
-            <img src="img/logo.svg"/>
-          </div>
-          <div class="side">
-            <img src="img/logo.svg"/>
-          </div>
-        </div>
-      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+        <path fill="#e22" d="m14.7,13.4-2.4,0,0-3.8-2.55,0,0,3.8-2.4,0,0-9.8,2.4,0,0,3.3,2.55,0,0-3.3,2.4,0,0,9.8"/>
+        <path fill="#000" d="m5.1,9c0.9,0,1.2-0.2,1.2-1s-0.26-1-1.2-1h-1.4v2h1.36zm0-4c0.36,0,0.6,0,0.7-0.1,0.2-0.2,0.2-0.5,0.2-0.8s0-0.6-0.25-0.7c-0.15-0.1-0.35-0.1-0.65-0.1h-1.4v1.7h1.4zm0.8-3.7c1,0,1.6,0.2,2,0.7,0.4,0.4,0.6,1,0.6,1.8,0,1-0.3,1.5-1.2,2.2,1,0.4,1.5,1.2,1.5,2.4,0,1-0.4,1.9-1,2.3-0.4,0.3-1.1,0.4-2,0.4h-4.5v-9.8h4.6"/>
+      </svg>
       <span class="title">PROJEKTY B.H.</span>
     </a>
     <nav>
@@ -41,7 +39,7 @@
       <a id="kontakt-nav" title="Kontakt" href="kontakt">kontakt</a>
     </nav>
     <div class="dropdown">
-      <button onclick="myFunction()" id="dropbtn" class="dropbtn">&#xe800</button>
+      <button onclick="myFunction()" id="dropbtn" class="dropbtn">&#xe800;</button>
       <div id="myDropdown" class="dropdown-content">
         <div class="drop"><a id="home-nav" title="O nás" href="/">o nás</a></div>
         <div class="drop"><a id="projekce-nav" title="Projekce" href="projekce">projekce</a></div>
@@ -50,577 +48,448 @@
         <div class="drop"><a id="kontakt-nav" title="Kontakt" href="kontakt">kontakt</a></div>
       </div>
     </div>
+  </div>
 </header>
 
 
-          <aside>768px</aside>
-      <div class="main-container">
-        <main id="getHeight">
-          <div class="main-col1">
-            <h1>Reference</h1>
-            	  <input type="radio" id="rd" name="color" />
+          <div class="main-container">
+        <main>
+          <h1>Reference</h1>
+              <br>
+	  <input type="radio" id="rd" name="color" />
 		<label for="rd">RODINNÉ DOMY</label>
 		<input type="radio" id="bd" name="color" />
 		<label for="bd">REVITALIZACE</label>
 		<input type="radio" id="os" name="color" />
 		<label for="os">OSTATNÍ</label>
+
+
     
-    <div class="cont tile os">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="Vestavba testovací komory, IGW, Brno" src="img/ref/small/os-igw.jpg" /></div>
+      <div class="ref-item os">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="Vestavba testovací komory, IGW, Brno" src="img/ref/small/os-igw.jpg"/></div>
         </div>
-        <div>
-        <h2>Vestavba testovací komory, IGW, Brno /2015/</h2>
-          <ul>
+        <h2 class="ref-heading">Vestavba testovací komory, IGW, Brno /2015/</h2>
+          <ul class="ref-list">
             
-            <li>projekt pro provedení stavby</li>
-            
-          </ul>
-        </div>
+              <li>projekt pro provedení stavby</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile rd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="Rekonstrukce RD, Chrlice" src="img/ref/small/rd-chrlice.jpg" /></div>
+      <div class="ref-item rd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="Rekonstrukce RD, Chrlice" src="img/ref/small/rd-chrlice.jpg"/></div>
         </div>
-        <div>
-        <h2>Rekonstrukce RD, Chrlice /2014-2015/</h2>
-          <ul>
+        <h2 class="ref-heading">Rekonstrukce RD, Chrlice /2014-2015/</h2>
+          <ul class="ref-list">
             
-            <li>dopracování projektové dokumentace</li>
-            
-          </ul>
-        </div>
+              <li>dopracování projektové dokumentace</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile bd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="BD, ul. Rybízová, Brno" src="img/ref/small/bd-rybizova.jpg" /></div>
+      <div class="ref-item bd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="BD, ul. Rybízová, Brno" src="img/ref/small/bd-rybizova.jpg"/></div>
         </div>
-        <div>
-        <h2>BD, ul. Rybízová, Brno /2014/</h2>
-          <ul>
+        <h2 class="ref-heading">BD, ul. Rybízová, Brno /2014/</h2>
+          <ul class="ref-list">
             
-            <li>projekt pro stavební povolení</li>
-            
-            <li>technický dozor investora</li>
-            
-          </ul>
-        </div>
+              <li>projekt pro stavební povolení</li>
+              
+              <li>technický dozor investora</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile rd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="Novostavba RD, Vyškov, architektonický návrh Marek Bartoš" src="img/ref/small/rd-vyskov.jpg" /></div>
+      <div class="ref-item rd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="Novostavba RD, Vyškov, architektonický návrh Marek Bartoš" src="img/ref/small/rd-vyskov.jpg"/></div>
         </div>
-        <div>
-        <h2>Novostavba RD, Vyškov, architektonický návrh Marek Bartoš /2014/</h2>
-          <ul>
+        <h2 class="ref-heading">Novostavba RD, Vyškov, architektonický návrh Marek Bartoš /2014/</h2>
+          <ul class="ref-list">
             
-            <li>projekt pro stavební povolení a realizaci</li>
-            
-          </ul>
-        </div>
+              <li>projekt pro stavební povolení a realizaci</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile bd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="BD, ul. Jabloňová, Brno" src="img/ref/small/bd-jablonova.jpg" /></div>
+      <div class="ref-item bd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="BD, ul. Jabloňová, Brno" src="img/ref/small/bd-jablonova.jpg"/></div>
         </div>
-        <div>
-        <h2>BD, ul. Jabloňová, Brno /2013/</h2>
-          <ul>
+        <h2 class="ref-heading">BD, ul. Jabloňová, Brno /2013/</h2>
+          <ul class="ref-list">
             
-            <li>projekt pro stavební povolení</li>
-            
-            <li>technický dozor investora</li>
-            
-          </ul>
-        </div>
+              <li>projekt pro stavební povolení</li>
+              
+              <li>technický dozor investora</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile os">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="Areál volného času, Havířov" src="img/ref/small/os-havirov.jpg" /></div>
+      <div class="ref-item os">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="Areál volného času, Havířov" src="img/ref/small/os-havirov.jpg"/></div>
         </div>
-        <div>
-        <h2>Areál volného času, Havířov /2013/</h2>
-          <ul>
+        <h2 class="ref-heading">Areál volného času, Havířov /2013/</h2>
+          <ul class="ref-list">
             
-            <li>studie využitelnosti</li>
-            
-            <li>příprava podkladů pro výběrové řízení</li>
-            
-          </ul>
-        </div>
+              <li>studie využitelnosti</li>
+              
+              <li>příprava podkladů pro výběrové řízení</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile bd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="BD, ul. Šebelová, Bílovice" src="img/ref/small/bd-sebelova.jpg" /></div>
+      <div class="ref-item bd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="BD, ul. Šebelová, Bílovice" src="img/ref/small/bd-sebelova.jpg"/></div>
         </div>
-        <div>
-        <h2>BD, ul. Šebelová, Bílovice /2012/</h2>
-          <ul>
+        <h2 class="ref-heading">BD, ul. Šebelová, Bílovice /2012/</h2>
+          <ul class="ref-list">
             
-            <li>projekt pro stavební povolení a realizaci</li>
-            
-            <li>technický dozor</li>
-            
-          </ul>
-        </div>
+              <li>projekt pro stavební povolení a realizaci</li>
+              
+              <li>technický dozor</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile rd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="Přístavba a nástavba RD, Ježkovice" src="img/ref/small/rd-jezkovice.jpg" /></div>
+      <div class="ref-item rd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="Přístavba a nástavba RD, Ježkovice" src="img/ref/small/rd-jezkovice.jpg"/></div>
         </div>
-        <div>
-        <h2>Přístavba a nástavba RD, Ježkovice /2012/</h2>
-          <ul>
+        <h2 class="ref-heading">Přístavba a nástavba RD, Ježkovice /2012/</h2>
+          <ul class="ref-list">
             
-            <li>studie</li>
-            
-            <li>projekt pro stavební povolení</li>
-            
-          </ul>
-        </div>
+              <li>studie</li>
+              
+              <li>projekt pro stavební povolení</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile bd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="BD, ul. Dunajská, Brno" src="img/ref/small/bd-dunajska.jpg" /></div>
+      <div class="ref-item bd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="BD, ul. Dunajská, Brno" src="img/ref/small/bd-dunajska.jpg"/></div>
         </div>
-        <div>
-        <h2>BD, ul. Dunajská, Brno /2012/</h2>
-          <ul>
+        <h2 class="ref-heading">BD, ul. Dunajská, Brno /2012/</h2>
+          <ul class="ref-list">
             
-            <li>inženýrská činnost</li>
-            
-          </ul>
-        </div>
+              <li>inženýrská činnost</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile bd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="BD, Třebíč" src="img/ref/small/bd-trebic.jpg" /></div>
+      <div class="ref-item bd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="BD, Třebíč" src="img/ref/small/bd-trebic.jpg"/></div>
         </div>
-        <div>
-        <h2>BD, Třebíč /2011/</h2>
-          <ul>
+        <h2 class="ref-heading">BD, Třebíč /2011/</h2>
+          <ul class="ref-list">
             
-            <li>technický dozor investora</li>
-            
-          </ul>
-        </div>
+              <li>technický dozor investora</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile bd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="BD, ul. Korejská, Brno-Žabovřesky" src="img/ref/small/bd-korejska.jpg" /></div>
+      <div class="ref-item bd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="BD, ul. Korejská, Brno-Žabovřesky" src="img/ref/small/bd-korejska.jpg"/></div>
         </div>
-        <div>
-        <h2>BD, ul. Korejská, Brno-Žabovřesky /2011/</h2>
-          <ul>
+        <h2 class="ref-heading">BD, ul. Korejská, Brno-Žabovřesky /2011/</h2>
+          <ul class="ref-list">
             
-            <li>projektová dokumentace</li>
-            
-            <li>technický dozor</li>
-            
-          </ul>
-        </div>
+              <li>projektová dokumentace</li>
+              
+              <li>technický dozor</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile bd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="BD, Vamberk" src="img/ref/small/bd-vamberk.jpg" /></div>
+      <div class="ref-item bd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="BD, Vamberk" src="img/ref/small/bd-vamberk.jpg"/></div>
         </div>
-        <div>
-        <h2>BD, Vamberk /2011/</h2>
-          <ul>
+        <h2 class="ref-heading">BD, Vamberk /2011/</h2>
+          <ul class="ref-list">
             
-            <li>technický dozor investora</li>
-            
-          </ul>
-        </div>
+              <li>technický dozor investora</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile bd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="BD, Mikuláškovo náměstí, Brno" src="img/ref/small/bd-mikulaskovo.jpg" /></div>
+      <div class="ref-item bd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="BD, Mikuláškovo náměstí, Brno" src="img/ref/small/bd-mikulaskovo.jpg"/></div>
         </div>
-        <div>
-        <h2>BD, Mikuláškovo náměstí, Brno /2011/</h2>
-          <ul>
+        <h2 class="ref-heading">BD, Mikuláškovo náměstí, Brno /2011/</h2>
+          <ul class="ref-list">
             
-            <li>inženýrská činnost</li>
-            
-          </ul>
-        </div>
+              <li>inženýrská činnost</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile os">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="Rekonstrukce nájezdových ramp v areálu RWE, Brno" src="img/ref/small/os-rwe-rampa.jpg" /></div>
+      <div class="ref-item os">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="Rekonstrukce nájezdových ramp v areálu RWE, Brno" src="img/ref/small/os-rwe-rampa.jpg"/></div>
         </div>
-        <div>
-        <h2>Rekonstrukce nájezdových ramp v areálu RWE, Brno /2011/</h2>
-          <ul>
+        <h2 class="ref-heading">Rekonstrukce nájezdových ramp v areálu RWE, Brno /2011/</h2>
+          <ul class="ref-list">
             
-            <li>projekt pro realizaci stavby</li>
-            
-          </ul>
-        </div>
+              <li>projekt pro realizaci stavby</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile bd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="BD, ul. Nádražní, Kuřim" src="img/ref/small/bd-nadrazni.jpg" /></div>
+      <div class="ref-item bd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="BD, ul. Nádražní, Kuřim" src="img/ref/small/bd-nadrazni.jpg"/></div>
         </div>
-        <div>
-        <h2>BD, ul. Nádražní, Kuřim /2011/</h2>
-          <ul>
+        <h2 class="ref-heading">BD, ul. Nádražní, Kuřim /2011/</h2>
+          <ul class="ref-list">
             
-            <li>výběrové řízení</li>
-            
-            <li>technický dozor investora</li>
-            
-            <li>projektová dokumentace</li>
-            
-          </ul>
-        </div>
+              <li>výběrové řízení</li>
+              
+              <li>technický dozor investora</li>
+              
+              <li>projektová dokumentace</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile bd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="BD, Mikuláškovo náměstí, Brno" src="img/ref/small/bd-mikulaskovo2.jpg" /></div>
+      <div class="ref-item bd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="BD, Mikuláškovo náměstí, Brno" src="img/ref/small/bd-mikulaskovo2.jpg"/></div>
         </div>
-        <div>
-        <h2>BD, Mikuláškovo náměstí, Brno /2010/</h2>
-          <ul>
+        <h2 class="ref-heading">BD, Mikuláškovo náměstí, Brno /2010/</h2>
+          <ul class="ref-list">
             
-            <li>projekt pro stavební povolení</li>
-            
-          </ul>
-        </div>
+              <li>projekt pro stavební povolení</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile bd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="BD, ul. Jiráskova, Zbýšov" src="img/ref/small/bd-zbysov.jpg" /></div>
+      <div class="ref-item bd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="BD, ul. Jiráskova, Zbýšov" src="img/ref/small/bd-zbysov.jpg"/></div>
         </div>
-        <div>
-        <h2>BD, ul. Jiráskova, Zbýšov /2010/</h2>
-          <ul>
+        <h2 class="ref-heading">BD, ul. Jiráskova, Zbýšov /2010/</h2>
+          <ul class="ref-list">
             
-            <li>projekt pro stavební povolení</li>
-            
-          </ul>
-        </div>
+              <li>projekt pro stavební povolení</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile bd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="BD, ul. Foltýnova, Brno" src="img/ref/small/bd-foltynova.jpg" /></div>
+      <div class="ref-item bd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="BD, ul. Foltýnova, Brno" src="img/ref/small/bd-foltynova.jpg"/></div>
         </div>
-        <div>
-        <h2>BD, ul. Foltýnova, Brno /2010/</h2>
-          <ul>
+        <h2 class="ref-heading">BD, ul. Foltýnova, Brno /2010/</h2>
+          <ul class="ref-list">
             
-            <li>projekt pro stavební povolení</li>
-            
-          </ul>
-        </div>
+              <li>projekt pro stavební povolení</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile rd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="Rekonstrukce střechy RD, ul. Tišnovská, Brno" src="img/ref/small/none.png" /></div>
+      <div class="ref-item rd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="Rekonstrukce střechy RD, ul. Tišnovská, Brno" src="img/ref/small/none.png"/></div>
         </div>
-        <div>
-        <h2>Rekonstrukce střechy RD, ul. Tišnovská, Brno /2010/</h2>
-          <ul>
+        <h2 class="ref-heading">Rekonstrukce střechy RD, ul. Tišnovská, Brno /2010/</h2>
+          <ul class="ref-list">
             
-            <li>výběrové řízení</li>
-            
-            <li>technický dozor investora</li>
-            
-            <li>projektová dokumentace pro realizaci stavby</li>
-            
-          </ul>
-        </div>
+              <li>výběrové řízení</li>
+              
+              <li>technický dozor investora</li>
+              
+              <li>projektová dokumentace pro realizaci stavby</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile os">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="Novostavba stáje v Krásné Hoře" src="img/ref/small/os-krasna-hora.jpg" /></div>
+      <div class="ref-item os">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="Novostavba stáje v Krásné Hoře" src="img/ref/small/os-krasna-hora.jpg"/></div>
         </div>
-        <div>
-        <h2>Novostavba stáje v Krásné Hoře /2009/</h2>
-          <ul>
+        <h2 class="ref-heading">Novostavba stáje v Krásné Hoře /2009/</h2>
+          <ul class="ref-list">
             
-            <li>projekt pro realizaci stavby</li>
-            
-          </ul>
-        </div>
+              <li>projekt pro realizaci stavby</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile os">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="Zemní práce (HTU, stabilizace) Digital Park Bratislava" src="img/ref/small/os-bratislava.jpg" /></div>
+      <div class="ref-item os">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="Zemní práce (HTU, stabilizace) Digital Park Bratislava" src="img/ref/small/os-bratislava.jpg"/></div>
         </div>
-        <div>
-        <h2>Zemní práce (HTU, stabilizace) Digital Park Bratislava /2009/</h2>
-          <ul>
+        <h2 class="ref-heading">Zemní práce (HTU, stabilizace) Digital Park Bratislava /2009/</h2>
+          <ul class="ref-list">
             
-            <li>řízení stavby pro Sedos a.s.</li>
-            
-          </ul>
-        </div>
+              <li>řízení stavby pro Sedos a.s.</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile os">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="Komunikace a odstavné plochy McDonald's Prešov" src="img/ref/small/os-mcdonald.jpg" /></div>
+      <div class="ref-item os">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="Komunikace a odstavné plochy McDonald's Prešov" src="img/ref/small/os-mcdonald.jpg"/></div>
         </div>
-        <div>
-        <h2>Komunikace a odstavné plochy McDonald's Prešov /2009/</h2>
-          <ul>
+        <h2 class="ref-heading">Komunikace a odstavné plochy McDonald's Prešov /2009/</h2>
+          <ul class="ref-list">
             
-            <li>řízení stavby pro Sedos a.s.</li>
-            
-          </ul>
-        </div>
+              <li>řízení stavby pro Sedos a.s.</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile bd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="BD, ul. Mášova, Brno" src="img/ref/small/bd-masova.jpg" /></div>
+      <div class="ref-item bd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="BD, ul. Mášova, Brno" src="img/ref/small/bd-masova.jpg"/></div>
         </div>
-        <div>
-        <h2>BD, ul. Mášova, Brno /2009/</h2>
-          <ul>
+        <h2 class="ref-heading">BD, ul. Mášova, Brno /2009/</h2>
+          <ul class="ref-list">
             
-            <li>technický dozor investora</li>
-            
-          </ul>
-        </div>
+              <li>technický dozor investora</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile bd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="BD, Cementářské sídliště 1311-1314, Hranice" src="img/ref/small/bd-hranice.jpg" /></div>
+      <div class="ref-item bd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="BD, Cementářské sídliště 1311-1314, Hranice" src="img/ref/small/bd-hranice.jpg"/></div>
         </div>
-        <div>
-        <h2>BD, Cementářské sídliště 1311-1314, Hranice /2009/</h2>
-          <ul>
+        <h2 class="ref-heading">BD, Cementářské sídliště 1311-1314, Hranice /2009/</h2>
+          <ul class="ref-list">
             
-            <li>výběrové řízení</li>
-            
-            <li>autorský dozor</li>
-            
-            <li>projekt zateplení, vytápění, vodovodu a kanalizace</li>
-            
-          </ul>
-        </div>
+              <li>výběrové řízení</li>
+              
+              <li>autorský dozor</li>
+              
+              <li>projekt zateplení, vytápění, vodovodu a kanalizace</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile os">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="BD Zelené město, zhotovitel f. SYNER" src="img/ref/small/os-zelene-mesto.jpg" /></div>
+      <div class="ref-item os">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="BD Zelené město, zhotovitel f. SYNER" src="img/ref/small/os-zelene-mesto.jpg"/></div>
         </div>
-        <div>
-        <h2>BD Zelené město, zhotovitel f. SYNER /2008/</h2>
-          <ul>
+        <h2 class="ref-heading">BD Zelené město, zhotovitel f. SYNER /2008/</h2>
+          <ul class="ref-list">
             
-            <li>projektová dokumentace</li>
-            
-            <li>technický dozor investora</li>
-            
-            <li>výběrové řízení</li>
-            
-          </ul>
-        </div>
+              <li>projektová dokumentace</li>
+              
+              <li>technický dozor investora</li>
+              
+              <li>výběrové řízení</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile os">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="Zemní práce (HTU, stabilizace) KIKA Olomouc" src="img/ref/small/os-kika.jpg" /></div>
+      <div class="ref-item os">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="Zemní práce (HTU, stabilizace) KIKA Olomouc" src="img/ref/small/os-kika.jpg"/></div>
         </div>
-        <div>
-        <h2>Zemní práce (HTU, stabilizace) KIKA Olomouc /2008/</h2>
-          <ul>
+        <h2 class="ref-heading">Zemní práce (HTU, stabilizace) KIKA Olomouc /2008/</h2>
+          <ul class="ref-list">
             
-            <li>řízení stavby pro Sedos a.s.</li>
-            
-          </ul>
-        </div>
+              <li>řízení stavby pro Sedos a.s.</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile rd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="Novostavba RD, Hostěnice" src="img/ref/small/rd-hostenice.jpg" /></div>
+      <div class="ref-item rd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="Novostavba RD, Hostěnice" src="img/ref/small/rd-hostenice.jpg"/></div>
         </div>
-        <div>
-        <h2>Novostavba RD, Hostěnice /2007/</h2>
-          <ul>
+        <h2 class="ref-heading">Novostavba RD, Hostěnice /2007/</h2>
+          <ul class="ref-list">
             
-            <li>projektová dokumentace</li>
-            
-            <li>technický dozor investora</li>
-            
-            <li>výběrové řízení</li>
-            
-          </ul>
-        </div>
+              <li>projektová dokumentace</li>
+              
+              <li>technický dozor investora</li>
+              
+              <li>výběrové řízení</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile bd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="BD, ul. Jundrovská 14, Brno" src="img/ref/small/bd-jundrovska.jpg" /></div>
+      <div class="ref-item bd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="BD, ul. Jundrovská 14, Brno" src="img/ref/small/bd-jundrovska.jpg"/></div>
         </div>
-        <div>
-        <h2>BD, ul. Jundrovská 14, Brno /2007/</h2>
-          <ul>
+        <h2 class="ref-heading">BD, ul. Jundrovská 14, Brno /2007/</h2>
+          <ul class="ref-list">
             
-            <li>řízení stavby pro Moravská stavební a.s.</li>
-            
-          </ul>
-        </div>
+              <li>řízení stavby pro Moravská stavební a.s.</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile os">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="Zemní práce (HTU, stabilizace) Prologis park Ostrava" src="img/ref/small/os-ostrava.jpg" /></div>
+      <div class="ref-item os">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="Zemní práce (HTU, stabilizace) Prologis park Ostrava" src="img/ref/small/os-ostrava.jpg"/></div>
         </div>
-        <div>
-        <h2>Zemní práce (HTU, stabilizace) Prologis park Ostrava /2007/</h2>
-          <ul>
+        <h2 class="ref-heading">Zemní práce (HTU, stabilizace) Prologis park Ostrava /2007/</h2>
+          <ul class="ref-list">
             
-            <li>řízení stavby pro Sedos a.s.</li>
-            
-          </ul>
-        </div>
+              <li>řízení stavby pro Sedos a.s.</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile rd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="Půdní vestavba v rodinném domě, Křižanov" src="img/ref/small/none.png" /></div>
+      <div class="ref-item rd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="Půdní vestavba v rodinném domě, Křižanov" src="img/ref/small/none.png"/></div>
         </div>
-        <div>
-        <h2>Půdní vestavba v rodinném domě, Křižanov /2007/</h2>
-          <ul>
+        <h2 class="ref-heading">Půdní vestavba v rodinném domě, Křižanov /2007/</h2>
+          <ul class="ref-list">
             
-            <li>technický dozor investora</li>
-            
-            <li>projektová dokumentace pro stavební povolení</li>
-            
-          </ul>
-        </div>
+              <li>technický dozor investora</li>
+              
+              <li>projektová dokumentace pro stavební povolení</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile rd">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="Kompletní přestavba rodinného domu, Křižanov" src="img/ref/small/rd-krizanov.jpg" /></div>
+      <div class="ref-item rd">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="Kompletní přestavba rodinného domu, Křižanov" src="img/ref/small/rd-krizanov.jpg"/></div>
         </div>
-        <div>
-        <h2>Kompletní přestavba rodinného domu, Křižanov /2005 - 2007/</h2>
-          <ul>
+        <h2 class="ref-heading">Kompletní přestavba rodinného domu, Křižanov /2005 - 2007/</h2>
+          <ul class="ref-list">
             
-            <li>projektová dokumentace pro realizaci stavby</li>
-            
-          </ul>
-        </div>
+              <li>projektová dokumentace pro realizaci stavby</li>
+              
+            </ul>
       </div>
-    </div>
     
-    <div class="cont tile os">
-      <div class="hide">
-        <div class="contForScale">
-        <div class="border"><img max-width="333" max-height="222" alt="Dálnice D8, tunel Panenská, budovy v portálech tunelů" src="img/ref/small/os-panenska.jpg" /></div>
+      <div class="ref-item os">
+        <div class="ref-hover-container">
+          <div class="ref-img-container"><img class="ref-img" alt="Dálnice D8, tunel Panenská, budovy v portálech tunelů" src="img/ref/small/os-panenska.jpg"/></div>
         </div>
-        <div>
-        <h2>Dálnice D8, tunel Panenská, budovy v portálech tunelů /2006/</h2>
-          <ul>
+        <h2 class="ref-heading">Dálnice D8, tunel Panenská, budovy v portálech tunelů /2006/</h2>
+          <ul class="ref-list">
             
-            <li>řízení stavby</li>
-            
-            <li>stavební dozor</li>
-            
-          </ul>
-        </div>
+              <li>řízení stavby</li>
+              
+              <li>stavební dozor</li>
+              
+            </ul>
       </div>
-    </div>
     
 
-          </div>
         </main>
-      </div>
-      <div class="getMainHeight">
-          <span id="height"></span>
       </div>
 
   <script type="text/javascript" src="/js/res.js"></script>
+
   </body>
 </html>
